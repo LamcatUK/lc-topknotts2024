@@ -1,0 +1,16 @@
+.avala {
+    span {
+        color: #9f7094;
+    }
+
+    &__logo {
+        max-width: 255px;
+    }
+    &__icon {
+        img {
+            width: 112px;
+            height: 94px;
+            margin-bottom: 0.5rem;
+        }
+    }
+}

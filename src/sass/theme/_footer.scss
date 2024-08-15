@@ -1,0 +1,119 @@
+footer {
+
+    // margin-top: 3rem;
+    .container-xl {
+        position: relative;
+    }
+
+    background-color: var(--col-grey-400);
+    color: var(--col-white);
+  
+    font-size: var(--fs-300);
+
+    .menu {
+        list-style: none;
+        padding-inline-start: 0;
+        li {
+            padding-bottom: 0.5rem;
+        }
+    }
+
+    a {
+        color: var(--col-white);
+        text-decoration: none;
+        &:hover {
+            color: var(--col-red-400);
+        }
+    }
+
+    .fa-ul li {
+        padding-bottom: 0.5rem;
+    }
+
+    .social_icons {
+        display: flex;
+        gap: 1rem;
+        font-size: var(--fs-700);
+        justify-content: center;
+    }
+
+    .colophon {
+        background-color: var(--col-grey-600);
+        padding-block: 1em;
+        color: var(--col-white);
+        font-size: var(--fs-100);
+        a {
+            color: var(--col-white);
+            text-decoration: none;
+            &:hover {
+                color: var(--col-red-400);
+            }
+        }
+    }
+
+    .footer {
+        &__grid {
+            display: grid;
+            gap: 1rem;
+            grid-template-areas: "logo" "services" "links" "locations" "call";
+            @media (min-width:576px) {
+                grid-template-columns: repeat(2,1fr);
+                grid-template-areas:
+                    "logo logo"
+                    "services links"
+                    "locations locations"
+                    "call call"
+                ;
+            }
+            @media (min-width:992px) {
+                grid-template-columns: repeat(5,1fr);
+                grid-template-areas: "logo services locations locations links call";
+            }
+        }
+        &__title {
+            font-size: var(--fs-400);
+            color: var(--col-green-400);
+            font-weight: var(--fw-600);
+            margin-bottom: 0.5em;
+        }
+
+        &__call {
+            font-size: var(--fs-400);
+            display: flex;
+            gap: 0.5rem;
+            text-decoration: none;
+            i {
+                align-self: center;
+                font-size: 1.4rem;
+            }
+            div {
+                font-weight: var(--fw-600);
+            }
+        }
+    }
+
+    #footer_logo {
+        grid-area: logo;
+        img {
+            display: block;
+        }
+    }
+    #footer_services {
+        grid-area: services;
+    }
+    #footer_locations {
+        grid-area: locations;
+        @media (min-width:576px) {
+            ul {
+                columns: 2;
+            }
+        }
+    }
+    #footer_links {
+        grid-area: links;
+    }
+    #footer_call {
+        grid-area: call;
+    }
+
+}
