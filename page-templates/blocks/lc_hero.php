@@ -1,8 +1,6 @@
-<?php
-$class = $block['className'] ?? 'mb-5';
-?>
-<section class="hero <?=$class?>">
-    <div class="container-xl h-100 d-flex justify-content-end overflow-hidden">
+<section class="hero">
+    <img src="<?=get_stylesheet_directory_uri()?>/img/hero-pattern.png" alt="" class="hero__bg">
+    <div class="hero__words container-xl h-100 d-flex align-items-center">
         <div class="row">
             <div class="col-md-6 d-flex flex-column align-items-start justify-content-center">
                 <div class="fs-300 fw-600"><?=get_field('pre_title')?></div>
@@ -21,7 +19,11 @@ $class = $block['className'] ?? 'mb-5';
                 }
                 ?>
             </div>
-            <div class="col-md-6 d-flex justify-content-center align-items-end">
+        </div>
+    </div>
+    <div class="hero__img container-xl">
+        <div class="row h-100">
+            <div class="col-md-6 offset-md-6 position-relative">
                 <?=wp_get_attachment_image( get_field('image'), 'large', false, array('alt' => '', 'class' => 'hero__image') )?>
             </div>
         </div>

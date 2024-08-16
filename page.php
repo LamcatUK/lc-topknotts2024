@@ -4,11 +4,30 @@ defined('ABSPATH') || exit;
  
 get_header();
 
+$content = get_the_content();
+
+$blocks = parse_blocks($content);
+
+$main = $hero = '';
+
+foreach ($blocks as $block) {
+    if ($block['blockName'] === 'acf/lc-hero') {
+        $hero .= render_block($block);
+    }
+    else {
+        $main .= render_block($block);
+    }
+}
+
+if (!empty($hero)) {
+    echo $hero;
+}
 ?>
-<main id="main">
+<main id="main" class="pt-5">
     <?php
-    the_post();
-the_content();
+    if (!empty($main)) {
+        echo $main;
+    }
 ?>
 </main>
 <?php

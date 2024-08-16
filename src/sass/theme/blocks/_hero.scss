@@ -1,12 +1,21 @@
 .hero {
-    min-height: 400px;
-    @media (min-width:576px) {
-        height: 500px;
+    position: relative;
+    isolation: isolate;
+    z-index: 0;
+    min-height: 600px;
+    display: grid;
+    grid-template-areas: "stack";
+
+    & > * {
+        grid-area: stack;
+        animation: parallax linear;
+        animation-timeline: scroll();
     }
-    background-image: url(../img/hero-pattern.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+    @media (min-width:576px) {
+        height: 600px;
+    }
+
 
     h1 {
         position: relative;
@@ -16,14 +25,54 @@
             position: absolute;
             width: 6rem;
             height: 0.4rem;
-            background-color: var(--col-red-400);
+            background-color: firebrick;
             bottom: 0;
             left: 0;
         }
     }
 
+    &__words {
+        --parallax-speed: 7;
+        z-index: 999;
+    }
+
+    &__img {
+        --parallax-speed: 3;
+        z-index: 1;
+        transform-origin: right bottom;
+        animation: scaler linear;
+        animation-timeline: scroll()
+    }
     &__image {
         max-height: 90%;
         object-fit: contain;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__bg {
+        --parallax-speed: -5;
+        z-index: -1;
+        min-height: 100%;
+        // max-height: 500px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@keyframes parallax {
+    to {
+      transform: 
+        translateY(calc(var(--parallax-speed) * 200px));
+    }
+}
+
+@keyframes scaler {
+    to {
+        transform:
+          scale(0.1) 
+          translateY(calc(var(--parallax-speed) * 200px));
     }
 }

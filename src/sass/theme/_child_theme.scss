@@ -39,16 +39,14 @@ a {
 }
 
 main {
-    margin-top: var(--h-top);
-    @media (min-width:992px) {
-        margin-top: var(--h-top-lg);
-    }
+    background-color: white;
+    position: relative;
     a:not([class]) {
         text-decoration: none;
         font-weight: var(--fw-600);
         color: inherit;
         &:hover {
-            color: var(--col-green-400)
+            color: var(--col-red-400)
         }
     }
 

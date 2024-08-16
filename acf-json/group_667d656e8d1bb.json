@@ -202,10 +202,10 @@
         },
         {
             "key": "field_66b118a2829eb",
-            "label": "Map Image",
-            "name": "map_image",
+            "label": "Directions URL",
+            "name": "directions_url",
             "aria-label": "",
-            "type": "image",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -214,8 +214,30 @@
                 "class": "",
                 "id": ""
             },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_66bf7062f620e",
+            "label": "Insta Banner BG",
+            "name": "insta_banner_bg",
+            "aria-label": "",
+            "type": "gallery",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
             "return_format": "id",
             "library": "all",
+            "min": 4,
+            "max": 4,
             "min_width": "",
             "min_height": "",
             "min_size": "",
@@ -223,6 +245,7 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
+            "insert": "append",
             "preview_size": "thumbnail"
         }
     ],
@@ -244,5 +267,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1723744668
+    "modified": 1723825448
 }

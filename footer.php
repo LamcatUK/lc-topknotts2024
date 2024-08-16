@@ -14,8 +14,10 @@ defined('ABSPATH') || exit;
 <footer>
     <div class="container-xl">
         <div class="footer__grid py-5">
-            <div id="footer_logo" class="mx-auto ms-sm-0">
-                <img src="<?=get_stylesheet_directory_uri()?>/img/topknotts--wo.png" width=205 height=40 alt="TopKnotts Crawley" class="mb-5">
+            <div id="footer_logo" class="text-center">
+                <img src="<?=get_stylesheet_directory_uri()?>/img/topknotts--wo.png" width=205 height=40 alt="TopKnotts Crawley" class="mb-5 mx-auto">
+
+                <a class="button button-primary justify-self-center" href="#">Book Now</a>
             </div>
             <div id="footer_findus" class="text-center text-sm-start">
                 <div class="footer__title">Find Us</div>
@@ -28,27 +30,15 @@ defined('ABSPATH') || exit;
             </div>
             <div id="footer_forher" class="text-center text-sm-start">
                 <div class="footer__title">For Her</div>
-                <div class="menu-footer-forher-container">
-                    <ul id="menu-footer-forher" class="menu">
-                        <?php wp_nav_menu(array('theme_location' => 'footer_menu_1')); ?>
-                    </ul>
-                </div>
+                <?php wp_nav_menu(array('theme_location' => 'footer_menu_1')); ?>
             </div>
             <div id="footer_forhim" class="text-center text-sm-start">
                 <div class="footer__title">For Him</div>
-                <div class="menu-footer-forhim-container">
-                    <ul id="menu-footer-forhim" class="menu">
-                        <?php wp_nav_menu(array('theme_location' => 'footer_menu_2')); ?>
-                    </ul>
-                </div>
+                <?php wp_nav_menu(array('theme_location' => 'footer_menu_2')); ?>
             </div>
-            <div id="footer_info" class="mx-auto ms-sm-0">
+            <div id="footer_info" class="text-center text-sm-start">
                 <div class="footer__title">Information</div>
-                <div class="menu-footer-info-container">
-                    <ul id="menu-footer-info" class="menu">
-                    <?php wp_nav_menu(array('theme_location' => 'footer_menu_2')); ?>
-                    </ul>
-                </div>
+                <?php wp_nav_menu(array('theme_location' => 'footer_menu_3')); ?>
             </div>
         </div>
     </div>

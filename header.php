@@ -19,13 +19,13 @@ defined('ABSPATH') || exit;
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="preload"
-        href="<?=get_stylesheet_directory_uri()?>/fonts/urbanist-v40-latin-200.woff2"
+        href="<?=get_stylesheet_directory_uri()?>/fonts/urbanist-v15-latin-200.woff2"
         as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload"
-        href="<?=get_stylesheet_directory_uri()?>/fonts/urbanist-v40-latin-500.woff2"
+        href="<?=get_stylesheet_directory_uri()?>/fonts/urbanist-v15-latin-500.woff2"
         as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload"
-        href="<?=get_stylesheet_directory_uri()?>/fonts/urbanist-v40-latin-700.woff2"
+        href="<?=get_stylesheet_directory_uri()?>/fonts/urbanist-v15-latin-700.woff2"
         as="font" type="font/woff2" crossorigin="anonymous">
     <?php
     if (get_field('gtm_property','options')) {
@@ -144,7 +144,7 @@ if (get_field('gtm_property', 'options')) {
                     <a href="/" class="navbar-brand my-auto" rel="home" aria-label="Home Page">
                         <img src="<?=get_stylesheet_directory_uri()?>/img/topknotts--dark.png" alt="TopKnotts Crawley">
                     </a>
-                    <a class="button button-primary" href="#">Book Now</a>
+                    <a class="button button-primary align-self-center" href="#">Book Now</a>
                     <button class="navbar-toggler input-button text-red-400" id="navToggle" data-bs-toggle="collapse"
                       data-bs-target=".navbars" type="button" aria-label="Navigation"><i
                           class="fa fa-navicon"></i></button>
@@ -156,7 +156,7 @@ if (get_field('gtm_property', 'options')) {
 'theme_location'  => 'primary_nav',
 'container_class' => 'collapse navbar-collapse navbars',
 'container_id'    => 'primaryNav',
-'menu_class'      => 'navbar-nav w-100 justify-content-around align-items-center gap-lg-5 ms-auto',
+'menu_class'      => 'navbar-nav w-100 justify-content-between align-items-center gap-lg-2 mx-4',
 'fallback_cb'     => '',
 'menu_id'         => 'main-menu',
 'depth'           => 2,

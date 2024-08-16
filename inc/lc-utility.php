@@ -41,6 +41,7 @@ function contact_address()
 }
 
 add_shortcode('contact_phone', 'contact_phone');
+
 function contact_phone($atts)
 {
 
@@ -61,6 +62,7 @@ function contact_phone($atts)
 }
 
 add_shortcode('contact_email', 'contact_email');
+
 function contact_email($atts)
 {
 
@@ -106,16 +108,16 @@ function social_icons($size = null)
 
     $output = '<div class="social_icons">';
     if ($s['linkedin_url'] ?? null) {
-        $output .= '<a href="' . $s['linkedin_url'] . '" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>';
+        $output .= '<a href="' . $s['linkedin_url'] . '" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in fa-2x"></i></a>';
     }
     if ($s['instagram_url'] ?? null) {
-        $output .= '<a href="' . $s['instagram_url'] . '" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>';
+        $output .= '<a href="' . $s['instagram_url'] . '" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram fa-2x"></i></a>';
     }
     if ($s['facebook_url'] ?? null) {
-        $output .= '<a href="' . $s['facebook_url'] . '" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>';
+        $output .= '<a href="' . $s['facebook_url'] . '" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f fa-2x"></i></a>';
     }
     if ($s['twitter_url'] ?? null) {
-        $output .= '<a href="' . $s['twitter_url'] . '" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>';
+        $output .= '<a href="' . $s['twitter_url'] . '" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter fa-2x"></i></a>';
     }
     $output .= '</div>';
 

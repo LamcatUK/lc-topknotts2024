@@ -1,0 +1,21 @@
+.insta_banner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 300px;
+        object-position: center;
+    }
+    &__button {
+        position: absolute;
+        display: grid;
+        place-content: center;
+        inset: 0;
+        background-color: rgba(0 0 0 / 0.3);
+    }
+}

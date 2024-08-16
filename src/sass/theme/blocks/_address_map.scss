@@ -1,0 +1,24 @@
+.address_map {
+    background-color: var(--col-grey-100);
+    &__grid {
+        display: grid;
+        @media (min-width:576px) {
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    li {
+        margin-bottom: 0.5rem;
+    }
+    .fa-brands,
+    .fa-li {
+        color: var(--col-red-400);
+    }
+    .social_icons {
+        display: flex;
+        gap: 1rem;
+    }
+
+    iframe {
+        margin-bottom: -0.4rem;
+    }
+}

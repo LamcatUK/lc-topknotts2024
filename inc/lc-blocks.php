@@ -58,7 +58,33 @@ function acf_blocks()
             'mode'	=> 'edit',
             'supports' => array('mode' => false),
         ));
-
+        acf_register_block_type(array(
+            'name'				=> 'lc_insta_banner',
+            'title'				=> __('LC Insta Banner'),
+            'category'			=> 'layout',
+            'icon'				=> 'cover-image',
+            'render_template'	=> 'page-templates/blocks/lc_insta_banner.php',
+            'mode'	=> 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block_type(array(
+            'name'				=> 'lc_review_slider',
+            'title'				=> __('LC Review Slider'),
+            'category'			=> 'layout',
+            'icon'				=> 'cover-image',
+            'render_template'	=> 'page-templates/blocks/lc_review_slider.php',
+            'mode'	=> 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block_type(array(
+            'name'				=> 'lc_address_map',
+            'title'				=> __('LC Address and Map'),
+            'category'			=> 'layout',
+            'icon'				=> 'cover-image',
+            'render_template'	=> 'page-templates/blocks/lc_address_map.php',
+            'mode'	=> 'edit',
+            'supports' => array('mode' => false),
+        ));
 
 
 
@@ -91,15 +117,7 @@ function acf_blocks()
             'supports' => array('mode' => false),
         ));
 
-        acf_register_block_type(array(
-            'name'				=> 'lc_address_map',
-            'title'				=> __('LC Address and Map'),
-            'category'			=> 'layout',
-            'icon'				=> 'cover-image',
-            'render_template'	=> 'page-templates/blocks/lc_address_map.php',
-            'mode'	=> 'edit',
-            'supports' => array('mode' => false),
-        ));
+
         acf_register_block_type(array(
             'name'				=> 'lc_contact_page',
             'title'				=> __('LC Contact Details and Form Block'),
