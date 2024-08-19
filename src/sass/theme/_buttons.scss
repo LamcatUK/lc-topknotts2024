@@ -24,11 +24,11 @@
 }
 
 .button-primary {
-    border: 1px solid var(--col-red-400);
-    background-color: var(--col-red-400);
+    border: 1px solid var(--col-accent);
+    background-color: var(--col-accent);
     color: var(--col-white);
     &:hover {
         background-color: var(--col-white);
-        color: var(--col-red-400);
+        color: var(--col-accent);
     }
 }

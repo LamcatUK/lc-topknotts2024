@@ -22,8 +22,11 @@ foreach ($blocks as $block) {
 if (!empty($hero)) {
     echo $hero;
 }
+
+$avala = strpos(get_permalink(), '/avala/') !== false ? 'avala' : '';
+
 ?>
-<main id="main" class="pt-5">
+<main id="main" class="pt-5 <?=$avala?>">
     <?php
     if (!empty($main)) {
         // echo apply_filters('the_content',$main);

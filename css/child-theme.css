@@ -21563,6 +21563,7 @@ readers do not read off random characters that represent icons */
   --col-grey-600: #666666;
   --col-grey-900: #333333;
   --col-red-400: #f40064;
+  --col-avala: #9f7094;
   --ff-body: "Urbanist", sans-serif;
   --ff-heading: "Urbanist", sans-serif;
   --ff-fa: "Font Awesome 6 Free";
@@ -21778,13 +21779,13 @@ strong, b, .fw-bold {
 }
 
 .button-primary {
-  border: 1px solid var(--col-red-400);
-  background-color: var(--col-red-400);
+  border: 1px solid var(--col-accent);
+  background-color: var(--col-accent);
   color: var(--col-white);
 }
 .button-primary:hover {
   background-color: var(--col-white);
-  color: var(--col-red-400);
+  color: var(--col-accent);
 }
 
 header {
@@ -22153,7 +22154,7 @@ footer #footer_info {
   position: absolute;
   width: 6rem;
   height: 0.4rem;
-  background-color: var(--col-red-400);
+  background-color: var(--col-accent);
   bottom: 0;
   left: 0;
 }
@@ -22450,6 +22451,14 @@ footer #footer_info {
 
 ul.price-list li::marker {
   color: var(--col-red-400);
+}
+
+:root {
+  --accent: var(--col-red-400);
+}
+
+main.avala {
+  --accent: var(--col-avala);
 }
 
 html {
