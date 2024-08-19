@@ -4,13 +4,14 @@ $services = get_field('services', 'option');
 $background = get_field('background');
 $bg = is_array($background) && isset($background[0]) && $background[0] == 'Yes' ? 'bg-grey-100' : '';
 
+$stripes = get_field('stripes') == 'Grey/White' ? 'stripes' : 'flip';
 
 foreach ($services as $service) {
     if ($service['associated_page'] == get_the_permalink()) {
         // var_dump($service);
         $cols = $service['layout'] == 'Standard' ? '' : 'three_cols';
         ?>
-<section class="prices <?=$bg?>">
+<section class="prices <?=$bg?> <?=$stripes?>">
     <div class="container-xl">
         <div class="service pb-5 <?=$cols?>">
             <div class="service_info">

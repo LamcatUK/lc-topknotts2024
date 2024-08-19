@@ -1,6 +1,14 @@
 .prices {
-    &:nth-of-type(odd) {
-        background-color: var(--col-grey-100);
+
+    &.stripes {
+        .prices:nth-of-type(odd) {
+            background-color: var(--col-grey-100);
+        }
+    }
+    &.flip {
+        .prices:nth-of-type(even) {
+            background-color: var(--col-grey-100);
+        }
     }
 
     h3 {
