@@ -11,7 +11,9 @@ $avala = strpos(get_permalink(), '/avala/') !== false ? 'avala' : '';
             <div class="col-md-6 d-flex flex-column align-items-start justify-content-center">
                 <?php
                 if ($avala ?? null) {
-                    echo 'AVALA';
+                    ?>
+                <img src="<?=get_stylesheet_directory_uri()?>/img/avala-logo.svg" alt="avala.">
+                    <?php
                 }
                 ?>
                 <div class="fs-300 fw-600"><?=get_field('pre_title')?></div>
