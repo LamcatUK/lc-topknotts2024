@@ -22177,6 +22177,11 @@ footer #footer_info {
   left: 50%;
   transform: translateX(-50%);
 }
+.hero__image--avala {
+  max-height: 170px;
+  align-self: center;
+  justify-self: center;
+}
 .hero__bg {
   --parallax-speed: -5;
   z-index: -1;

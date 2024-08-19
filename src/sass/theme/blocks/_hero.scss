@@ -51,6 +51,11 @@
         left: 50%;
         transform: translateX(-50%);
     }
+    &__image--avala {
+        max-height: 170px;
+        align-self: center;
+        justify-self: center;
+    }
 
     &__bg {
         --parallax-speed: -5;

@@ -29,11 +29,11 @@ $avala = strpos(get_permalink(), '/avala/') !== false ? 'avala' : '';
     </div>
     <div class="hero__img container-xl">
         <div class="row h-100">
-            <div class="col-md-6 offset-md-6 position-relative">
+            <div class="col-md-6 offset-md-6 position-relative d-grid">
             <?php
                 if ($avala ?? null) {
                     ?>
-                <img src="<?=get_stylesheet_directory_uri()?>/img/avala-logo.svg" alt="avala.">
+                <img src="<?=get_stylesheet_directory_uri()?>/img/avala-logo.svg" alt="avala." class="hero__image--avala">
                     <?php
                 }
                 else {
