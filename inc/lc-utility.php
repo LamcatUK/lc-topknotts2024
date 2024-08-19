@@ -372,4 +372,18 @@ function acf_load_menu_field_choices($field)
     return $field;
 }
 add_filter('acf/load_field/name=sidebar_menu', 'acf_load_menu_field_choices');
+
+
+function book_button_shortcode() {
+    error_log('book_button_shortcode called');
+    $output = '
+    <div class="text-center py-4">
+        <a href="/contact/" class="button button-primary">Book Now</a>
+    </div>
+    ';
+    return $output;
+}
+add_shortcode('book_button','book_button_shortcode');
+
+
 ?>

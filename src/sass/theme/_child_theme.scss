@@ -137,6 +137,15 @@ input[type=submit].wpcf7-submit {
     font-weight: var(--fw-600);
 }
 
+.wp-block-columns-is-layout-flex {
+    gap: 1rem;
+}
+
+.wp-block-image {
+    img {
+        width: 100%;
+    }
+}
 
 .qr {
     display: grid;

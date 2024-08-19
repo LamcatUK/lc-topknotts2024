@@ -85,57 +85,102 @@ function acf_blocks()
             'mode'	=> 'edit',
             'supports' => array('mode' => false),
         ));
-
-
-
         acf_register_block_type(array(
-            'name'				=> 'lc_service_nav',
-            'title'				=> __('LC Service Nav Cards'),
+            'name'				=> 'lc_child_cards',
+            'title'				=> __('LC Child Cards'),
             'category'			=> 'layout',
             'icon'				=> 'cover-image',
-            'render_template'	=> 'page-templates/blocks/lc_service_nav.php',
+            'render_template'	=> 'page-templates/blocks/lc_child_cards.php',
+            'mode'	=> 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block_type(array(
+            'name'				=> 'lc_breadcrumbs',
+            'title'				=> __('LC Breadcrumbs'),
+            'category'			=> 'layout',
+            'icon'				=> 'cover-image',
+            'render_template'	=> 'page-templates/blocks/lc_breadcrumbs.php',
             'mode'	=> 'edit',
             'supports' => array('mode' => false),
         ));
 
         acf_register_block_type(array(
-            'name'				=> 'lc_latest_blogs',
-            'title'				=> __('LC Latest Blogs'),
+            'name'				=> 'lc_prices',
+            'title'				=> __('LC Prices'),
             'category'			=> 'layout',
             'icon'				=> 'cover-image',
-            'render_template'	=> 'page-templates/blocks/lc_latest_blogs.php',
+            'render_template'	=> 'page-templates/blocks/lc_prices.php',
             'mode'	=> 'edit',
             'supports' => array('mode' => false),
         ));
         acf_register_block_type(array(
-            'name'				=> 'lc_faqs',
-            'title'				=> __('LC FAQs'),
+            'name'				=> 'lc_price_list',
+            'title'				=> __('LC Price List'),
             'category'			=> 'layout',
             'icon'				=> 'cover-image',
-            'render_template'	=> 'page-templates/blocks/lc_faqs.php',
+            'render_template'	=> 'page-templates/blocks/lc_price_list.php',
             'mode'	=> 'edit',
             'supports' => array('mode' => false),
         ));
 
+        acf_register_block_type(array(
+            'name'				=> 'lc_three_images',
+            'title'				=> __('LC Three Images'),
+            'category'			=> 'layout',
+            'icon'				=> 'cover-image',
+            'render_template'	=> 'page-templates/blocks/lc_three_images.php',
+            'mode'	=> 'edit',
+            'supports' => array('mode' => false),
+        ));
 
-        acf_register_block_type(array(
-            'name'				=> 'lc_contact_page',
-            'title'				=> __('LC Contact Details and Form Block'),
-            'category'			=> 'layout',
-            'icon'				=> 'cover-image',
-            'render_template'	=> 'page-templates/blocks/lc_contact_page.php',
-            'mode'	=> 'edit',
-            'supports' => array('mode' => false),
-        ));
-        acf_register_block_type(array(
-            'name'				=> 'lc_form_cta',
-            'title'				=> __('LC CTA and Form Block'),
-            'category'			=> 'layout',
-            'icon'				=> 'cover-image',
-            'render_template'	=> 'page-templates/blocks/lc_form_cta.php',
-            'mode'	=> 'edit',
-            'supports' => array('mode' => false),
-        ));
+    //     acf_register_block_type(array(
+    //         'name'				=> 'lc_service_nav',
+    //         'title'				=> __('LC Service Nav Cards'),
+    //         'category'			=> 'layout',
+    //         'icon'				=> 'cover-image',
+    //         'render_template'	=> 'page-templates/blocks/lc_service_nav.php',
+    //         'mode'	=> 'edit',
+    //         'supports' => array('mode' => false),
+    //     ));
+
+    //     acf_register_block_type(array(
+    //         'name'				=> 'lc_latest_blogs',
+    //         'title'				=> __('LC Latest Blogs'),
+    //         'category'			=> 'layout',
+    //         'icon'				=> 'cover-image',
+    //         'render_template'	=> 'page-templates/blocks/lc_latest_blogs.php',
+    //         'mode'	=> 'edit',
+    //         'supports' => array('mode' => false),
+    //     ));
+    //     acf_register_block_type(array(
+    //         'name'				=> 'lc_faqs',
+    //         'title'				=> __('LC FAQs'),
+    //         'category'			=> 'layout',
+    //         'icon'				=> 'cover-image',
+    //         'render_template'	=> 'page-templates/blocks/lc_faqs.php',
+    //         'mode'	=> 'edit',
+    //         'supports' => array('mode' => false),
+    //     ));
+
+
+    //     acf_register_block_type(array(
+    //         'name'				=> 'lc_contact_page',
+    //         'title'				=> __('LC Contact Details and Form Block'),
+    //         'category'			=> 'layout',
+    //         'icon'				=> 'cover-image',
+    //         'render_template'	=> 'page-templates/blocks/lc_contact_page.php',
+    //         'mode'	=> 'edit',
+    //         'supports' => array('mode' => false),
+    //     ));
+    //     acf_register_block_type(array(
+    //         'name'				=> 'lc_form_cta',
+    //         'title'				=> __('LC CTA and Form Block'),
+    //         'category'			=> 'layout',
+    //         'icon'				=> 'cover-image',
+    //         'render_template'	=> 'page-templates/blocks/lc_form_cta.php',
+    //         'mode'	=> 'edit',
+    //         'supports' => array('mode' => false),
+    //     ));
     }
 }
 

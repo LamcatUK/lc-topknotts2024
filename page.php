@@ -26,7 +26,8 @@ if (!empty($hero)) {
 <main id="main" class="pt-5">
     <?php
     if (!empty($main)) {
-        echo $main;
+        // echo apply_filters('the_content',$main);
+        echo do_shortcode($main);
     }
 ?>
 </main>

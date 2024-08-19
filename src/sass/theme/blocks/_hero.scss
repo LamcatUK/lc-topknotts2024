@@ -25,24 +25,24 @@
             position: absolute;
             width: 6rem;
             height: 0.4rem;
-            background-color: firebrick;
+            background-color: var(--col-red-400);
             bottom: 0;
             left: 0;
         }
     }
 
     &__words {
-        --parallax-speed: 7;
+        --parallax-speed: 1;
         z-index: 999;
     }
-
     &__img {
-        --parallax-speed: 3;
-        z-index: 1;
+        --parallax-speed: 2;
+        z-index: 2;
         transform-origin: right bottom;
         animation: scaler linear;
         animation-timeline: scroll()
     }
+
     &__image {
         max-height: 90%;
         object-fit: contain;
@@ -60,6 +60,22 @@
         width: 100%;
         object-fit: cover;
     }
+
+    &.home_hero {
+
+        .hero__words {
+            --parallax-speed: 7;
+        }
+
+        .hero__img {
+            --parallax-speed: 2;
+        }
+
+        .hero__bg {
+            --parallax-speed: -5;
+        }
+    }
+
 }
 
 @keyframes parallax {
@@ -72,7 +88,8 @@
 @keyframes scaler {
     to {
         transform:
-          scale(0.1) 
-          translateY(calc(var(--parallax-speed) * 200px));
+          scale(0.8) 
+          translateX(calc(var(--parallax-speed) * 10px))
+          translateY(calc(var(--parallax-speed) * 100px));
     }
 }
