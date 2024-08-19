@@ -22457,7 +22457,7 @@ ul.price-list li::marker {
   --col-accent: var(--col-red-400);
 }
 
-main.avala {
+body.avala {
   --col-accent: var(--col-avala);
 }
 
