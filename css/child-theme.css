@@ -21879,7 +21879,7 @@ footer a {
   text-decoration: none;
 }
 footer a:hover {
-  color: var(--col-red-400);
+  color: var(--col-accent);
 }
 footer .fa-ul li {
   padding-bottom: 0.5rem;
@@ -21901,7 +21901,7 @@ footer .colophon a {
   text-decoration: none;
 }
 footer .colophon a:hover {
-  color: var(--col-red-400);
+  color: var(--col-accent);
 }
 footer .footer__grid {
   display: grid;

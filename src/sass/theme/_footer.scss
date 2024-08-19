@@ -25,7 +25,7 @@ footer {
         color: var(--col-white);
         text-decoration: none;
         &:hover {
-            color: var(--col-red-400);
+            color: var(--col-accent);
         }
     }
 
@@ -49,7 +49,7 @@ footer {
             color: var(--col-white);
             text-decoration: none;
             &:hover {
-                color: var(--col-red-400);
+                color: var(--col-accent);
             }
         }
     }
