@@ -22381,10 +22381,10 @@ footer #footer_info {
   margin-bottom: -0.4rem;
 }
 
-.prices.stripes .prices:nth-of-type(odd) {
+.prices.stripes:nth-of-type(odd) {
   background-color: var(--col-grey-100);
 }
-.prices.flip .prices:nth-of-type(even) {
+.prices.flip:nth-of-type(even) {
   background-color: var(--col-grey-100);
 }
 .prices h3, .prices .h3 {
