@@ -8,11 +8,11 @@
 @import "blocks/blocks";
 
 :root {
-    --accent: var(--col-red-400);
+    --col-accent: var(--col-red-400);
 }
 
 main.avala {
-    --accent: var(--col-avala);
+    --col-accent: var(--col-avala);
 }
 
 html {
