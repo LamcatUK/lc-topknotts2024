@@ -9,13 +9,6 @@ $avala = strpos(get_permalink(), '/avala/') !== false ? 'avala' : '';
     <div class="hero__words container-xl h-100 d-flex align-items-center">
         <div class="row w-100">
             <div class="col-md-6 d-flex flex-column align-items-start justify-content-center">
-                <?php
-                if ($avala ?? null) {
-                    ?>
-                <img src="<?=get_stylesheet_directory_uri()?>/img/avala-logo.svg" alt="avala.">
-                    <?php
-                }
-                ?>
                 <div class="fs-300 fw-600"><?=get_field('pre_title')?></div>
                 <h1><?=get_field('title')?></h1>
                 <?php
@@ -37,7 +30,16 @@ $avala = strpos(get_permalink(), '/avala/') !== false ? 'avala' : '';
     <div class="hero__img container-xl">
         <div class="row h-100">
             <div class="col-md-6 offset-md-6 position-relative">
-                <?=wp_get_attachment_image( get_field('image'), 'large', false, array('alt' => '', 'class' => 'hero__image') )?>
+            <?php
+                if ($avala ?? null) {
+                    ?>
+                <img src="<?=get_stylesheet_directory_uri()?>/img/avala-logo.svg" alt="avala.">
+                    <?php
+                }
+                else {
+                    echo wp_get_attachment_image( get_field('image'), 'large', false, array('alt' => '', 'class' => 'hero__image') );
+                }
+                ?>
             </div>
         </div>
     </div>
