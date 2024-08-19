@@ -121,8 +121,10 @@ if (is_front_page() || is_page('contact-us')) {
 ?>
     <?php wp_head(); ?>
 </head>
-
-<body <?php body_class(); ?>>
+<?php
+$avala = strpos(get_permalink(), '/avala/') !== false ? 'avala' : '';
+?>
+<body <?php body_class($avala); ?>>
     <?php
 do_action('wp_body_open');
 

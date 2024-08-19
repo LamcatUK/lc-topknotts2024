@@ -23,10 +23,8 @@ if (!empty($hero)) {
     echo $hero;
 }
 
-$avala = strpos(get_permalink(), '/avala/') !== false ? 'avala' : '';
-
 ?>
-<main id="main" class="pt-5 <?=$avala?>">
+<main id="main" class="pt-5">
     <?php
     if (!empty($main)) {
         // echo apply_filters('the_content',$main);
