@@ -24,7 +24,7 @@ foreach ($services as $service) {
                 }
                 if ($service['image'] ?? null) {
                     ?>
-                <?=wp_get_attachment_image( $service['image'], 'large', false, null)?>
+                <?=wp_get_attachment_image( $service['image'], 'large', false, array('class' => 'has-shadow--lg'))?>
                     <?php
                 }
                 ?>
