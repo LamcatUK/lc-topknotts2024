@@ -146,7 +146,7 @@ if (get_field('gtm_property', 'options')) {
                     <a href="/" class="navbar-brand my-auto" rel="home" aria-label="Home Page">
                         <img src="<?=get_stylesheet_directory_uri()?>/img/topknotts--dark.png" alt="TopKnotts Crawley">
                     </a>
-                    <a class="button button-primary align-self-center" href="#">Book Now</a>
+                    <a class="button button-primary align-self-center" href="/contact/">Book Now</a>
                     <button class="navbar-toggler input-button text-red-400" id="navToggle" data-bs-toggle="collapse"
                       data-bs-target=".navbars" type="button" aria-label="Navigation"><i
                           class="fa fa-navicon"></i></button>

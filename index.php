@@ -12,7 +12,7 @@ $pp = get_option('page_for_posts');
         <div class="row w-100">
             <div class="col-md-6 d-flex flex-column align-items-start justify-content-center">
                 <h1>The Beauty Thread</h1>
-                <a href="/booking/" class="button button-primary">Book Now</a>
+                <a href="/contact/" class="button button-primary">Book Now</a>
             </div>
         </div>
     </div>
