@@ -6,20 +6,27 @@ get_header();
 $pp = get_option('page_for_posts');
 
 ?>
-<main id="main" class="pb-5">
-    <section class="hero">
-        <div class="container-xl py-5 text-center">
-            <h1 class="text-green-400"><?=get_the_title($pp)?></h1>
-            <?php
-            if (get_the_content(null, false, $pp) ?? null) {
-                ?>
-            <div class="fs-700 text-white text-balance mb-4"><?=get_the_content(null, false, $pp)?></div>
-                <?php
-            }
-            ?>
-            <a href="/get-quote/" class="button button-green">Get a Quote</a>
+<section class="hero">
+    <img src="<?=get_stylesheet_directory_uri()?>/img/hero-pattern.png" alt="" class="hero__bg">
+    <div class="hero__words container-xl h-100 d-flex align-items-center">
+        <div class="row w-100">
+            <div class="col-md-6 d-flex flex-column align-items-start justify-content-center">
+                <h1>The Beauty Thread</h1>
+                <a href="/booking/" class="button button-primary">Book Now</a>
+            </div>
         </div>
-    </section>
+    </div>
+    <div class="hero__img container-xl">
+        <div class="row h-100">
+            <div class="col-md-6 offset-md-6 position-relative d-grid">
+            <?php
+                echo wp_get_attachment_image( get_field('image'), 'large', false, array('alt' => '', 'class' => 'hero__image') );
+            ?>
+            </div>
+        </div>
+    </div>
+</section>
+<main id="main" class="pb-5">
     <div class="container-xl py-5 mb-5">
         <?php
 $cats = get_categories(array('exclude' => array(32)));

@@ -133,6 +133,26 @@ function acf_blocks()
             'supports' => array('mode' => false),
         ));
 
+        acf_register_block_type(array(
+            'name'				=> 'lc_gallery',
+            'title'				=> __('LC Gallery'),
+            'category'			=> 'layout',
+            'icon'				=> 'cover-image',
+            'render_template'	=> 'page-templates/blocks/lc_gallery.php',
+            'mode'	=> 'edit',
+            'supports' => array('mode' => false),
+        ));
+
+        acf_register_block_type(array(
+            'name'				=> 'lc_faqs',
+            'title'				=> __('LC FAQs'),
+            'category'			=> 'layout',
+            'icon'				=> 'cover-image',
+            'render_template'	=> 'page-templates/blocks/lc_faqs.php',
+            'mode'	=> 'edit',
+            'supports' => array('mode' => false),
+        ));
+
     //     acf_register_block_type(array(
     //         'name'				=> 'lc_service_nav',
     //         'title'				=> __('LC Service Nav Cards'),
@@ -152,15 +172,7 @@ function acf_blocks()
     //         'mode'	=> 'edit',
     //         'supports' => array('mode' => false),
     //     ));
-    //     acf_register_block_type(array(
-    //         'name'				=> 'lc_faqs',
-    //         'title'				=> __('LC FAQs'),
-    //         'category'			=> 'layout',
-    //         'icon'				=> 'cover-image',
-    //         'render_template'	=> 'page-templates/blocks/lc_faqs.php',
-    //         'mode'	=> 'edit',
-    //         'supports' => array('mode' => false),
-    //     ));
+
 
 
     //     acf_register_block_type(array(

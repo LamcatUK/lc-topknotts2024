@@ -28,7 +28,7 @@ if (function_exists('yoast_breadcrumb')) {
     </section>
     <div class="container-xl">
         <div class="row g-4 pb-4">
-            <div class="col-lg-9 order-2">
+            <div class="col-lg-9">
                 <h1 class="single-blog__title"><?=get_the_title()?>
                 </h1>
                 <?=$img?>
@@ -51,7 +51,7 @@ foreach ($blocks as $block) {
 }
 ?>
             </div>
-            <div class="col-lg-3 order-1">
+            <div class="col-lg-3">
                 <div class="sidebar">
                     <?php
     if ($sidebar) {
@@ -79,7 +79,6 @@ foreach ($blocks as $block) {
                     <?php
     }
 ?>
-                    <a href="/get-quote/" class="button button-green text-center d-none d-lg-block">Get a Quote Today!</a>
                 </div>
             </div>
         </div>

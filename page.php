@@ -24,7 +24,7 @@ if (!empty($hero)) {
 }
 
 ?>
-<main id="main" class="pt-5">
+<main id="main" class="pt-4">
     <?php
     if (!empty($main)) {
         // echo apply_filters('the_content',$main);
