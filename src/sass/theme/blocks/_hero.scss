@@ -1,99 +1,182 @@
 .hero {
     position: relative;
-    isolation: isolate;
-    z-index: 0;
-    min-height: 600px;
+    height: 600px; /* Fixed hero height */
+    overflow: hidden;
     display: grid;
     grid-template-areas: "stack";
+    grid-template-rows: 1fr;
 
-    & > * {
-        grid-area: stack;
-        animation: parallax linear;
-        animation-timeline: scroll();
-    }
-
-    @media (min-width:576px) {
-        height: 600px;
-    }
-
-    h1 {
-        position: relative;
-        padding-bottom: 0.5rem;
-        &::after {
-            content: "";
-            position: absolute;
-            width: 6rem;
-            height: 0.4rem;
-            background-color: var(--col-accent);
-            bottom: 0;
-            left: 0;
-        }
-    }
-
-    &__words {
-        --parallax-speed: 1;
-        z-index: 999;
-    }
-    &__img {
-        --parallax-speed: 2;
-        z-index: 2;
-        transform-origin: right bottom;
-        animation: scaler linear;
-        animation-timeline: scroll()
-    }
-
-    &__image {
-        max-height: 90%;
-        object-fit: contain;
+    /* Background Image */
+    .hero__bg {
         position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    &__image--avala {
-        max-height: 170px;
-        align-self: center;
-        justify-self: center;
-    }
-
-    &__bg {
-        --parallax-speed: -5;
-        z-index: -1;
-        min-height: 100%;
-        // max-height: 500px;
+        top: 0;
+        left: 0;
         width: 100%;
+        height: 100%;
         object-fit: cover;
+        z-index: -1;
     }
 
-    &.home_hero {
+    /* Main content grid */
+    .hero__content {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two columns: text and image */
+        grid-template-rows: 1fr;
+        align-items: center;
+        height: 100%;
+        z-index: 1;
+        column-gap: 3rem; /* Add space between text and image */
+    }
 
-        .hero__words {
-            --parallax-speed: 7;
+    /* Text Section */
+    .hero__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2rem;
+
+        h1 {
+            position: relative;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem; /* Increase space between h1 and the button */
+            font-weight: bold;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -0.5rem;
+                left: 0;
+                width: 6rem;
+                height: 0.25rem;
+                background-color: var(--col-accent);
+            }
         }
 
-        .hero__img {
-            --parallax-speed: 2;
+        .content {
+            margin-bottom: 1rem;
         }
 
-        .hero__bg {
-            --parallax-speed: -5;
+        /* Ensure the button is properly spaced */
+        a.button {
+            margin-top: 1rem; /* You can adjust this for more space between content and button */
         }
     }
 
-}
+    /* Image Section */
+    .hero__image-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end; /* Stick the image to the bottom */
+        height: 100%; /* Make the container take the full height of the grid cell */
+        padding-right: 2rem;
 
-@keyframes parallax {
-    to {
-      transform: 
-        translateY(calc(var(--parallax-speed) * 200px));
+        .hero__image {
+            max-height: 100%; /* Ensure the image fills the container */
+            width: auto;
+        }
     }
 }
 
-@keyframes scaler {
-    to {
-        transform:
-          scale(0.8) 
-          translateX(calc(var(--parallax-speed) * 10px))
-          translateY(calc(var(--parallax-speed) * 100px));
-    }
-}
+
+
+
+// .hero {
+//     position: relative;
+//     isolation: isolate;
+//     z-index: 0;
+//     min-height: 600px;
+//     display: grid;
+//     grid-template-areas: "stack";
+
+//     & > * {
+//         grid-area: stack;
+//         animation: parallax linear;
+//         animation-timeline: scroll();
+//     }
+
+//     @media (min-width:576px) {
+//         height: 600px;
+//     }
+
+//     h1 {
+//         position: relative;
+//         padding-bottom: 0.5rem;
+//         &::after {
+//             content: "";
+//             position: absolute;
+//             width: 6rem;
+//             height: 0.4rem;
+//             background-color: var(--col-accent);
+//             bottom: 0;
+//             left: 0;
+//         }
+//     }
+
+//     &__words {
+//         --parallax-speed: 1;
+//         z-index: 999;
+//     }
+//     &__img {
+//         --parallax-speed: 2;
+//         z-index: 2;
+//         transform-origin: right bottom;
+//         animation: scaler linear;
+//         animation-timeline: scroll()
+//     }
+
+//     &__image {
+//         max-height: 90%;
+//         object-fit: contain;
+//         position: absolute;
+//         bottom: 0;
+//         left: 50%;
+//         transform: translateX(-50%);
+//     }
+//     &__image--avala {
+//         max-height: 170px;
+//         align-self: center;
+//         justify-self: center;
+//     }
+
+//     &__bg {
+//         --parallax-speed: -5;
+//         z-index: -1;
+//         min-height: 100%;
+//         // max-height: 500px;
+//         width: 100%;
+//         object-fit: cover;
+//     }
+
+//     &.home_hero {
+
+//         .hero__words {
+//             --parallax-speed: 7;
+//         }
+
+//         .hero__img {
+//             --parallax-speed: 2;
+//         }
+
+//         .hero__bg {
+//             --parallax-speed: -5;
+//         }
+//     }
+
+// }
+
+// @keyframes parallax {
+//     to {
+//       transform: 
+//         translateY(calc(var(--parallax-speed) * 200px));
+//     }
+// }
+
+// @keyframes scaler {
+//     to {
+//         transform:
+//           scale(0.8) 
+//           translateX(calc(var(--parallax-speed) * 10px))
+//           translateY(calc(var(--parallax-speed) * 100px));
+//     }
+// }
