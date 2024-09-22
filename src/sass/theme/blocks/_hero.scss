@@ -21,7 +21,9 @@
     .hero__content {
         position: relative;
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Two columns: text and image */
+        @media (min-width:992px) {
+            grid-template-columns: 1fr 1fr; /* Two columns: text and image */
+        }
         grid-template-rows: 1fr;
         align-items: center;
         height: 100%;
@@ -65,15 +67,22 @@
 
     /* Image Section */
     .hero__image-container {
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end; /* Stick the image to the bottom */
-        height: 100%; /* Make the container take the full height of the grid cell */
-        padding-right: 2rem;
+        display: none;
+        @media (min-width:992px) {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end; /* Stick the image to the bottom */
+            height: 100%; /* Make the container take the full height of the grid cell */
+            padding-right: 2rem;
 
-        .hero__image {
-            max-height: 100%; /* Ensure the image fills the container */
-            width: auto;
+            .hero__image {
+                max-height: 100%; /* Ensure the image fills the container */
+                width: auto;
+            }
+
+            &.avala {
+                align-items: center;
+            }
         }
     }
 }

@@ -55,14 +55,23 @@ header {
     .navbar-brand {
         order: 1;
     }
+
     .navbar-toggler {
-        order: 2
-    }
-    .button {
         order: 5;
     }
+    .button {
+        order: 4;
+    }
     .navbars {
-        order: 3;
+        order: 9;
+    }
+    @media (min-width:1200px) {
+        .navbars {
+            order: 2;
+        }
+        .button {
+            order: 9;
+        }
     }
 
 }

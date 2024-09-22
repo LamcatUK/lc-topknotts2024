@@ -21837,13 +21837,21 @@ header .navbar-brand {
   order: 1;
 }
 header .navbar-toggler {
-  order: 2;
-}
-header .button {
   order: 5;
 }
+header .button {
+  order: 4;
+}
 header .navbars {
-  order: 3;
+  order: 9;
+}
+@media (min-width: 1200px) {
+  header .navbars {
+    order: 2;
+  }
+  header .button {
+    order: 9;
+  }
 }
 
 .navbar-brand {
@@ -22152,13 +22160,17 @@ footer #footer_info {
 .hero .hero__content {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two columns: text and image */
   grid-template-rows: 1fr;
   align-items: center;
   height: 100%;
   z-index: 1;
   -moz-column-gap: 3rem;
   column-gap: 3rem; /* Add space between text and image */
+}
+@media (min-width: 992px) {
+  .hero .hero__content {
+    grid-template-columns: 1fr 1fr; /* Two columns: text and image */
+  }
 }
 .hero .hero__text {
   display: flex;
@@ -22189,15 +22201,23 @@ footer #footer_info {
   margin-top: 1rem; /* You can adjust this for more space between content and button */
 }
 .hero .hero__image-container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end; /* Stick the image to the bottom */
-  height: 100%; /* Make the container take the full height of the grid cell */
-  padding-right: 2rem;
+  display: none;
 }
-.hero .hero__image-container .hero__image {
-  max-height: 100%; /* Ensure the image fills the container */
-  width: auto;
+@media (min-width: 992px) {
+  .hero .hero__image-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end; /* Stick the image to the bottom */
+    height: 100%; /* Make the container take the full height of the grid cell */
+    padding-right: 2rem;
+  }
+  .hero .hero__image-container .hero__image {
+    max-height: 100%; /* Ensure the image fills the container */
+    width: auto;
+  }
+  .hero .hero__image-container.avala {
+    align-items: center;
+  }
 }
 
 .nav_cards__card {

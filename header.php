@@ -141,12 +141,12 @@ if (get_field('gtm_property', 'options')) {
 }
 ?>
     <header id="navigation">
-        <nav id="main-nav" class="navbar navbar-expand-lg d-block px-0" aria-labelledby="main-nav-label">
+        <nav id="main-nav" class="navbar navbar-expand-xl d-block px-0" aria-labelledby="main-nav-label">
             <div class="container-xl">
                     <a href="/" class="navbar-brand my-auto" rel="home" aria-label="Home Page">
                         <img src="<?=get_stylesheet_directory_uri()?>/img/topknotts--dark.png" alt="TopKnotts Crawley">
                     </a>
-                    <a class="button button-primary align-self-center" href="/contact/">Book Now</a>
+                    <a class="d-none d-xl-block button button-primary align-self-center" href="/contact/">Book Now</a>
                     <button class="navbar-toggler input-button text-red-400" id="navToggle" data-bs-toggle="collapse"
                       data-bs-target=".navbars" type="button" aria-label="Navigation"><i
                           class="fa fa-navicon"></i></button>
@@ -158,7 +158,7 @@ if (get_field('gtm_property', 'options')) {
 'theme_location'  => 'primary_nav',
 'container_class' => 'collapse navbar-collapse navbars',
 'container_id'    => 'primaryNav',
-'menu_class'      => 'navbar-nav w-100 justify-content-between align-items-center gap-lg-2 mx-4',
+'menu_class'      => 'navbar-nav w-100 justify-content-between align-items-center gap-lg-2 mx-0 mx-xl-4',
 'fallback_cb'     => '',
 'menu_id'         => 'main-menu',
 'depth'           => 2,

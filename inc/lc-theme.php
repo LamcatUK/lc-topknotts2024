@@ -154,4 +154,17 @@ add_action('wp_enqueue_scripts', 'lc_theme_enqueue');
 
 add_filter('wpcf7_autop_or_not', '__return_false');
 
+function add_ctas_to_nav( $items, $args ) {
+    if( $args->theme_location != 'primary_nav' ) {
+        return $items;
+    }
+    
+    $link  = '<li class="d-xl-none menu-item nav-item"><a class="button button-primary" href="/contact/">Book Now</a></div>';
+
+    $items .= $link;
+    
+    return $items;
+}
+add_action( 'wp_nav_menu_items', 'add_ctas_to_nav', 10, 2 );
+
 ?>

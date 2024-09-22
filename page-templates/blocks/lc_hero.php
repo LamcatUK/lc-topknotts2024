@@ -22,7 +22,7 @@ $avala = strpos(get_permalink(), '/avala/') !== false ? 'avala' : '';
             <?php } ?>
         </div>
 
-        <div class="hero__image-container">
+        <div class="hero__image-container <?=$avala?>">
             <?php
                 if ($avala ?? null) {
                     ?>
