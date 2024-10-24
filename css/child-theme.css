@@ -21914,18 +21914,18 @@ footer .colophon a:hover {
 footer .footer__grid {
   display: grid;
   gap: 1rem;
-  grid-template-areas: "logo" "forher" "forhim" "info" "findus";
+  grid-template-areas: "logo" "forher" "info" "findus";
 }
 @media (min-width: 576px) {
   footer .footer__grid {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "logo logo" "forher forher" "forhim info" "findus findus";
+    grid-template-areas: "logo" "forher" "info" "findus";
   }
 }
 @media (min-width: 992px) {
   footer .footer__grid {
     grid-template-columns: repeat(5, 1fr);
-    grid-template-areas: "logo findus forher forher forhim info";
+    grid-template-areas: "logo findus forher forher info";
   }
 }
 footer .footer__title {
