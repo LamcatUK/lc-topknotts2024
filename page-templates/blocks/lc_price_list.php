@@ -11,7 +11,7 @@ $service_classes = get_field('service_class');
         foreach ($services as $s) {
             // var_dump($s['service_class']);
             if (is_array($service_classes) && in_array($s['service_class'], $service_classes)) {
-                echo '<li><a href="#' . acf_slugify($s) . '">' . $s . '</a></li>';
+                echo '<li><a href="#' . acf_slugify($s['service_name']) . '">' . $s['service_name'] . '</a></li>';
             }
         }
         ?>
