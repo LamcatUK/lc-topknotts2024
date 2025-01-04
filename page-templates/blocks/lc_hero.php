@@ -1,37 +1,36 @@
 <?php
 $c = is_front_page() == 1 ? 'home_hero' : '';
 
-$avala = strpos(get_permalink(), '/avala/') !== false ? 'avala' : '';
+$avala = strpos(get_permalink(), '/avala/') !== false ? 'beauty' : '';
 
 ?>
-<section class="hero <?=$c?>">
+<section class="hero <?= $c ?>">
     <!-- Background Image -->
-    <img src="<?=get_stylesheet_directory_uri()?>/img/hero-pattern.png" alt="" class="hero__bg">
+    <img src="<?= get_stylesheet_directory_uri() ?>/img/hero-pattern.png" alt="" class="hero__bg">
 
     <!-- Content Section with Bootstrap's container-xl -->
     <div class="container-xl h-100 hero__content">
         <div class="hero__text">
-            <div class="pre-title"><?=get_field('pre_title')?></div>
-            <h1><?=get_field('title')?></h1>
+            <div class="pre-title"><?= get_field('pre_title') ?></div>
+            <h1><?= get_field('title') ?></h1>
             <?php if (get_field('content') ?? null) { ?>
-                <div class="content"><?=get_field('content')?></div>
+                <div class="content"><?= get_field('content') ?></div>
             <?php } ?>
             <?php if (get_field('cta') ?? null) {
                 $l = get_field('cta'); ?>
-                <a href="<?=$l['url']?>" target="<?=$l['target']?>" class="button button-primary"><?=$l['title']?></a>
+                <a href="<?= $l['url'] ?>" target="<?= $l['target'] ?>" class="button button-primary"><?= $l['title'] ?></a>
             <?php } ?>
         </div>
 
-        <div class="hero__image-container <?=$avala?>">
+        <div class="hero__image-container <?= $avala ?>">
             <?php
-                if ($avala ?? null) {
-                    ?>
-                <img src="<?=get_stylesheet_directory_uri()?>/img/avala-logo.svg" alt="avala." class="hero__image--avala">
-                    <?php
-                }
-                else {
-                    echo wp_get_attachment_image( get_field('image'), 'large', false, array('alt' => '', 'class' => 'hero__image') );
-                }
+            if ($avala ?? null) {
+            ?>
+                <img src="<?= get_stylesheet_directory_uri() ?>/img/avala-logo.svg" alt="avala." class="hero__image--avala">
+            <?php
+            } else {
+                echo wp_get_attachment_image(get_field('image'), 'large', false, array('alt' => '', 'class' => 'hero__image'));
+            }
             ?>
         </div>
     </div>
