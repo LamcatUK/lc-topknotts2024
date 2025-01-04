@@ -22532,6 +22532,11 @@ ul.price-list li::marker {
   text-decoration: none;
   color: var(--col-black);
   padding: 1rem;
+  transition: background-color var(--transition), color var(--transition);
+}
+.child_cards__card:hover {
+  background-color: var(--col-accent);
+  color: var(--col-white);
 }
 
 :root {
