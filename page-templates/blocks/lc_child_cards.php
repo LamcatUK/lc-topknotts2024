@@ -16,8 +16,8 @@ if ($child_query->have_posts()) {
                 while ($child_query->have_posts()) {
                     $child_query->the_post();
                 ?>
-                    <div class="col-md-4">
-                        <a href="<?= get_the_permalink() ?>" class="child_cards__card"><?= get_the_title() ?></a>
+                    <div class="col-md-6 col-lg-3 child_cards__card">
+                        <a href="<?= get_the_permalink() ?>"><?= get_the_title() ?></a>
                     </div>
                 <?php
                 }
