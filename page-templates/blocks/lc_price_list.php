@@ -19,7 +19,7 @@ $service_classes = get_field('service_class');
 
 
 foreach ($services as $service) {
-    if (is_array($service_classes) && in_array($s['service_class'], $service_classes)) {
+    if (is_array($service_classes) && in_array($service['service_class'], $service_classes)) {
         $cols = $service['layout'] == 'Standard' ? '' : 'three_cols';
         $id = acf_slugify($service['service_name']);
 ?>
