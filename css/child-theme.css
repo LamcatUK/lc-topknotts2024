@@ -22531,6 +22531,7 @@ ul.price-list li::marker {
   font-weight: var(--fw-600);
   text-decoration: none;
   color: var(--col-black);
+  padding: 1rem;
 }
 
 :root {
