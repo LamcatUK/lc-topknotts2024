@@ -8,7 +8,7 @@ $service_classes = get_field('service_class');
     <ul class="cols-lg-3 mb-0 price-list">
         <?php
         foreach ($service as $s) {
-            if (is_array($service_classes) && in_array(get_field('service_classes'), $service_classes)) {
+            if (is_array($service_classes) && in_array(get_field('service_class'), $service_classes)) {
                 echo '<li><a href="#' . acf_slugify($s) . '">' . $s . '</a></li>';
             }
         }
