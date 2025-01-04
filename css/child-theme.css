@@ -22216,8 +22216,10 @@ footer #footer_info {
     width: auto;
   }
   .hero .hero__image-container .hero__image--avala {
-    align-items: center;
     max-width: 350px;
+  }
+  .hero .hero__image-container.avala {
+    align-items: center;
   }
 }
 
