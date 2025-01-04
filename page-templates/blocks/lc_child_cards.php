@@ -11,13 +11,13 @@ if ($child_query->have_posts()) {
 ?>
     <section class="child_cards py-5">
         <div class="container-xl">
-            <div class="row">
+            <div class="row g-4">
                 <?php
                 while ($child_query->have_posts()) {
                     $child_query->the_post();
                 ?>
-                    <div class="col-md-6 col-lg-3 child_cards__card">
-                        <a href="<?= get_the_permalink() ?>"><?= get_the_title() ?></a>
+                    <div class="col-md-6 col-lg-3">
+                        <a href="<?= get_the_permalink() ?>" class="child_cards__card"><?= get_the_title() ?></a>
                     </div>
                 <?php
                 }

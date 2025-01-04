@@ -22529,9 +22529,8 @@ ul.price-list li::marker {
   height: 100%;
   font-size: var(--fs-700);
   font-weight: var(--fw-600);
-}
-.child_cards__card a {
   text-decoration: none;
+  color: var(--col-black);
 }
 
 :root {
