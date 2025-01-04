@@ -1,7 +1,7 @@
 <?php
 $c = is_front_page() == 1 ? 'home_hero' : '';
 
-$avala = strpos(get_permalink(), '/avala/') !== false ? 'beauty' : '';
+$avala = strpos(get_permalink(), '/beauty/') !== false ? 'avala' : '';
 
 ?>
 <section class="hero <?= $c ?>">
