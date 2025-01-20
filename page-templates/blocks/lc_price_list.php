@@ -32,10 +32,13 @@ foreach ($services as $service) {
                 break;
         }
         $id = acf_slugify($service['service_name']);
+
+        $beauty = strpos(get_permalink(), '/beauty/') !== false ? 'beauty' : '';
+
 ?>
         <section class="prices" id="<?= $id ?>">
             <div class="container-xl">
-                <div class="service pb-5 <?= $cols ?>">
+                <div class="service pb-5 <?= $cols ?> <?= $beauty ?>">
                     <div class="service_info">
                         <h3><?= esc_html($service['service_name']) ?></h3>
                         <?php

@@ -22459,6 +22459,11 @@ footer #footer_info {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+@media (min-width: 768px) {
+  .prices .service.beauty {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .prices .service .service_option {
   padding: 0.5rem 1rem;
   border-bottom: 1px solid var(--col-grey-200);
