@@ -22486,7 +22486,7 @@ footer #footer_info {
 }
 @media (min-width: 768px) {
   .prices .beauty > .service_list {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr !important;
   }
 }
 .prices .option_variant {
