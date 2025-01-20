@@ -36,8 +36,9 @@ foreach ($services as $service) {
                         <?php
                         }
                         if ($service['image'] ?? null) {
+                            $class == $beauty ?? 'has-shadow--lg'
                         ?>
-                            <?= wp_get_attachment_image($service['image'], 'large', false, array('class' => 'has-shadow--lg')) ?>
+                            <?= wp_get_attachment_image($service['image'], 'large', false, array('class' => $class)) ?>
                         <?php
                         }
                         ?>
