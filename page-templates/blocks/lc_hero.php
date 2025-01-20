@@ -2,6 +2,7 @@
 $c = is_front_page() == 1 ? 'home_hero' : '';
 
 $avala = strpos(get_permalink(), '/beauty/') !== false ? 'avala' : '';
+$butox = strpos(get_permalink(), '/botox/') !== false ? 'botox' : '';
 
 ?>
 <section class="hero <?= $c ?>">
@@ -27,6 +28,11 @@ $avala = strpos(get_permalink(), '/beauty/') !== false ? 'avala' : '';
             if ($avala ?? null) {
             ?>
                 <img src="<?= get_stylesheet_directory_uri() ?>/img/avala-logo.svg" alt="avala." class="hero__image--avala">
+            <?php
+            } 
+            elsif ($botox ?? null) {
+            ?>
+                <img src="<?= get_stylesheet_directory_uri() ?>/img/elegant_aesthetics_butterfly_white_logo.png" alt="Elegant Aesthetics" class="hero__image--avala">
             <?php
             } else {
                 echo wp_get_attachment_image(get_field('image'), 'large', false, array('alt' => '', 'class' => 'hero__image'));
