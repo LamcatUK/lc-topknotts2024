@@ -22481,7 +22481,7 @@ footer #footer_info {
 }
 .prices .option_variant {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
 }
 .prices .option_variant > span:last-of-type {
   text-align: end;
