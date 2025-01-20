@@ -20,7 +20,17 @@ $service_classes = get_field('service_class');
 
 foreach ($services as $service) {
     if (is_array($service_classes) && in_array($service['service_class'], $service_classes)) {
-        $cols = $service['layout'] == 'Standard' ? '' : 'three_cols';
+        switch ($service['layout']) {
+            case 'Standard':
+                $cols = '';
+                break;
+            case 'Wide':
+                $cols = 'wide_cols';
+                break;
+            default:
+                $cols = 'three_cols';
+                break;
+        }
         $id = acf_slugify($service['service_name']);
 ?>
         <section class="prices" id="<?= $id ?>">
