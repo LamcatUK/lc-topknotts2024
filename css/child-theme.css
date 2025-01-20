@@ -21801,6 +21801,14 @@ input[type=submit].wpcf7-submit:disabled:hover {
   color: var(--col-white);
 }
 
+.wpcf7 {
+  max-width: unset !important;
+}
+
+.form-label {
+  font-weight: var(--fw-600);
+}
+
 header {
   position: fixed;
   top: 0;

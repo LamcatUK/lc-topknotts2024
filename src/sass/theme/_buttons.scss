@@ -53,3 +53,11 @@ input[type=submit].wpcf7-submit {
     }
 
 }
+
+.wpcf7 {
+    max-width: unset !important;
+}
+
+.form-label {
+    font-weight: var(--fw-600);
+}
