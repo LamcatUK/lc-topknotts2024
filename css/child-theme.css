@@ -22244,6 +22244,9 @@ footer #footer_info {
   .hero .hero__image-container.avala {
     align-items: center;
   }
+  .hero .hero__image-container.botox {
+    justify-content: center;
+  }
 }
 
 .nav_cards__card {

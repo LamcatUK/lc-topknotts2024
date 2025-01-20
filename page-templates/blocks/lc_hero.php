@@ -23,7 +23,7 @@ $butox = strpos(get_permalink(), '/botox/') !== false ? 'botox' : '';
             <?php } ?>
         </div>
 
-        <div class="hero__image-container <?= $avala ?>">
+        <div class="hero__image-container <?= $avala ?> <?= $butox ?>">
             <?php
             if ($avala ?? null) {
             ?>
@@ -31,7 +31,7 @@ $butox = strpos(get_permalink(), '/botox/') !== false ? 'botox' : '';
             <?php
             } elseif ($butox ?? null) {
             ?>
-                <img src="<?= get_stylesheet_directory_uri() ?>/img/elegant_aesthetics_butterfly_white_logo.png" alt="Elegant Aesthetics" class="hero__image--avala">
+                <img src="<?= get_stylesheet_directory_uri() ?>/img/elegant_aesthetics_butterfly_white_logo.png" alt="Elegant Aesthetics" class="hero__image--ea">
             <?php
             } else {
                 echo wp_get_attachment_image(get_field('image'), 'large', false, array('alt' => '', 'class' => 'hero__image'));
