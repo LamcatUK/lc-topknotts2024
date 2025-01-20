@@ -9,11 +9,24 @@ $stripes = get_field('stripes') == 'Grey/White' ? 'stripes' : 'flip';
 foreach ($services as $service) {
     if ($service['associated_page'] == get_the_permalink()) {
         // var_dump($service);
-        $cols = $service['layout'] == 'Standard' ? '' : 'three_cols';
+        switch ($service['layout']) {
+            case 'Standard':
+                $cols = '';
+                break;
+            case 'Wide':
+                $cols = 'wide_cols';
+                break;
+            default:
+                $cols = 'three_cols';
+                break;
+        }
+
+        $beauty = strpos(get_permalink(), '/beauty/') !== false ? 'beauty' : '';
+
 ?>
         <section class="prices <?= $bg ?> <?= $stripes ?>">
             <div class="container-xl">
-                <div class="service pb-5 <?= $cols ?>">
+                <div class="service pb-5 <?= $cols ?> <?= $beauty ?>">
                     <div class="service_info">
                         <h3><?= esc_html($service['service_name']) ?></h3>
                         <?php
