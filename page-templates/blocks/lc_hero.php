@@ -40,51 +40,6 @@ $butox = strpos(get_permalink(), '/botox/') !== false ? 'botox' : '';
         </div>
     </div>
 </section>
-
-<?php
-/*
-<section class="hero <?=$c?>">
-    <img src="<?=get_stylesheet_directory_uri()?>/img/hero-pattern.png" alt="" class="hero__bg">
-    <div class="hero__words container-xl h-100 d-flex align-items-center">
-        <div class="row w-100">
-            <div class="col-md-6 d-flex flex-column align-items-start justify-content-center">
-                <div class="fs-300 fw-600"><?=get_field('pre_title')?></div>
-                <h1><?=get_field('title')?></h1>
-                <?php
-                if (get_field('content') ?? null) {
-                    ?>
-                <div class="fs-500 mb-4"><?=get_field('content')?></div>
-                    <?php
-                }
-                if (get_field('cta') ?? null) {
-                    $l = get_field('cta');
-                    ?>
-                <a href="<?=$l['url']?>" target="<?=$l['target']?>" class="button button-primary"><?=$l['title']?></a>
-                    <?php
-                }
-                ?>
-            </div>
-        </div>
-    </div>
-    <div class="hero__img container-xl">
-        <div class="row h-100">
-            <div class="col-md-6 offset-md-6 position-relative d-grid">
-            <?php
-                if ($avala ?? null) {
-                    ?>
-                <img src="<?=get_stylesheet_directory_uri()?>/img/avala-logo.svg" alt="avala." class="hero__image--avala">
-                    <?php
-                }
-                else {
-                    echo wp_get_attachment_image( get_field('image'), 'large', false, array('alt' => '', 'class' => 'hero__image') );
-                }
-                ?>
-            </div>
-        </div>
-    </div>
-</section>
-*/
-?>
 <script>
     document.addEventListener("scroll", function() {
         const scrollPosition = window.scrollY;
