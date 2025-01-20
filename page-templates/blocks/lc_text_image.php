@@ -42,10 +42,11 @@ if (isset($block['anchor'])) {
                     <div class="fs-300 fw-600"><?= get_field('pre_title') ?></div>
                 <?php
                 }
+                $h = get_field('level') ?? 'h2';
                 ?>
-                <h2 class="mb-4">
+                <<?= $h ?> class="mb-4">
                     <?= get_field('title') ?>
-                </h2>
+                </<?= $h ?>>
                 <div>
                     <?= get_field('content') ?>
                 </div>
