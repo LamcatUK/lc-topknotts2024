@@ -29,7 +29,7 @@ $butox = strpos(get_permalink(), '/botox/') !== false ? 'botox' : '';
             ?>
                 <img src="<?= get_stylesheet_directory_uri() ?>/img/avala-logo.svg" alt="avala." class="hero__image--avala">
             <?php
-            } elseif ($botox ?? null) {
+            } elseif ($butox ?? null) {
             ?>
                 <img src="<?= get_stylesheet_directory_uri() ?>/img/elegant_aesthetics_butterfly_white_logo.png" alt="Elegant Aesthetics" class="hero__image--avala">
             <?php
