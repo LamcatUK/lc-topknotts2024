@@ -51,8 +51,8 @@ if (isset($block['anchor'])) {
                     <?= get_field('content') ?>
                 </div>
                 <?php
-                if (get_field('link') ?? null) {
-                    $l = get_field('link');
+                if (get_field('cta') ?? null) {
+                    $l = get_field('cta');
                 ?>
                     <a href="<?= $l['url'] ?>" target="<?= $l['target'] ?>" class="button button-primary"><?= $l['title'] ?></a>
                 <?php
