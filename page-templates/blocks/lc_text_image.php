@@ -50,6 +50,14 @@ if (isset($block['anchor'])) {
                 <div>
                     <?= get_field('content') ?>
                 </div>
+                <?php
+                if (get_field('link') ?? null) {
+                    $l = get_field('link');
+                ?>
+                    <a href="<?= $l['url'] ?>" target="<?= $l['target'] ?>" class="button button-primary"><?= $l['title'] ?></a>
+                <?php
+                }
+                ?>
             </div>
             <div
                 class="<?= $colImage ?> <?= $orderImage ?> d-flex justify-content-center align-items-center">

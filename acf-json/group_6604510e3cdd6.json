@@ -244,6 +244,23 @@
             "delay": 0
         },
         {
+            "key": "field_678e9c2f112f1",
+            "label": "CTA",
+            "name": "cta",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 0
+        },
+        {
             "key": "field_66045189f20c8",
             "label": "Image",
             "name": "",
@@ -305,5 +322,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737398428
+    "modified": 1737399354
 }
