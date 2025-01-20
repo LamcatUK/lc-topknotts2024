@@ -21848,6 +21848,8 @@ header .dropdown-item:active {
 @media (min-width: 992px) {
   header #main-nav .container-xl {
     align-items: stretch;
+    -moz-column-gap: 2rem;
+    column-gap: 2rem;
   }
 }
 header .nav-forher > ul.dropdown-menu {

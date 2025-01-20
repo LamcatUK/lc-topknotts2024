@@ -44,6 +44,7 @@ header {
         @media (min-width:992px) {
             .container-xl {
                 align-items: stretch;
+                column-gap: 2rem;
             }
         }
     }
