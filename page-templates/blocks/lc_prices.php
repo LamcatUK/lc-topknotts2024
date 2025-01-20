@@ -39,6 +39,7 @@ foreach ($services as $service) {
                             $class == $beauty ?? 'has-shadow--lg';
                             var_dump($beauty);
                             $size == ($beauty == 'beauty') ? 'full' : 'large';
+                            var_dump($size);
                         ?>
                             <?= wp_get_attachment_image($service['image'], $size, false, array('class' => $class)) ?>
                         <?php
