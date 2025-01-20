@@ -27,11 +27,11 @@ $butox = strpos(get_permalink(), '/botox/') !== false ? 'botox' : '';
             <?php
             if ($avala ?? null) {
             ?>
-                <img src="<?= get_stylesheet_directory_uri() ?>/img/avala-logo.svg" alt="avala." class="hero__image--avala">
+                <img src="<?= get_stylesheet_directory_uri() ?>/img/avala-logo.svg" alt="avala." class="hero__image hero__image--avala">
             <?php
             } elseif ($butox ?? null) {
             ?>
-                <img src="<?= get_stylesheet_directory_uri() ?>/img/elegant_aesthetics_butterfly_white_logo.png" alt="Elegant Aesthetics" class="hero__image--ea">
+                <img src="<?= get_stylesheet_directory_uri() ?>/img/elegant_aesthetics_butterfly_white_logo.png" alt="Elegant Aesthetics" class="hero__image hero__image--ea">
             <?php
             } else {
                 echo wp_get_attachment_image(get_field('image'), 'large', false, array('alt' => '', 'class' => 'hero__image'));
