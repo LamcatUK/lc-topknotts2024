@@ -2,6 +2,8 @@
 $background = get_field('bg_colour') ?: 'white';
 $class = $block['className'] ?? 'py-5';
 
+$shadow = get_field('shadow') == 'Yes' ? 'has-shadow--lg' : '';
+
 switch (get_field('split')) {
     case 4060:
         $colText = 'col-md-4';
@@ -29,28 +31,28 @@ if (isset($block['anchor'])) {
 
 ?>
 <section
-    class="text_image bg-<?=$background?> <?=$class?>">
+    class="text_image bg-<?= $background ?> <?= $class ?>">
     <div class="container-xl">
         <div class="row g-5">
             <div
-                class="<?=$colText?> <?=$orderText?> d-flex flex-column justify-content-center">
+                class="<?= $colText ?> <?= $orderText ?> d-flex flex-column justify-content-center">
                 <?php
                 if (get_field('pre_title') ?? null) {
-                    ?>
-                <div class="fs-300 fw-600"><?=get_field('pre_title')?></div>
-                    <?php
+                ?>
+                    <div class="fs-300 fw-600"><?= get_field('pre_title') ?></div>
+                <?php
                 }
                 ?>
                 <h2 class="mb-4">
-                    <?=get_field('title')?>
+                    <?= get_field('title') ?>
                 </h2>
                 <div>
-                    <?=get_field('content')?>
+                    <?= get_field('content') ?>
                 </div>
             </div>
             <div
-                class="<?=$colImage?> <?=$orderImage?> d-flex justify-content-center align-items-center">
-                <img src="<?=wp_get_attachment_image_url(get_field('image'), 'large')?>" class="rounded--lg has-shadow--lg"
+                class="<?= $colImage ?> <?= $orderImage ?> d-flex justify-content-center align-items-center">
+                <img src="<?= wp_get_attachment_image_url(get_field('image'), 'large') ?>" class="rounded--lg <?= $shadow ?>"
                     alt="">
             </div>
         </div>
