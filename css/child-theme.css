@@ -21753,7 +21753,7 @@ strong, b, .fw-bold {
   margin-inline: auto;
 }
 
-.button {
+.button, input[type=submit].wpcf7-submit {
   padding: 0.25em 2em;
   text-decoration: none;
   transition: background-color var(--transition), color var(--transition), border var(--transition);
@@ -21778,14 +21778,27 @@ strong, b, .fw-bold {
   color: var(--col-white);
 }
 
-.button-primary {
+.button-primary, input[type=submit].wpcf7-submit {
   border: 1px solid var(--col-accent);
   background-color: var(--col-accent);
   color: var(--col-white);
 }
-.button-primary:hover {
+.button-primary:hover, input[type=submit].wpcf7-submit:hover {
   background-color: var(--col-white);
   color: var(--col-accent);
+}
+
+input[type=submit].wpcf7-submit {
+  border-radius: 0;
+  width: auto;
+}
+input[type=submit].wpcf7-submit:disabled {
+  border: 1px solid var(--col-grey-200);
+  background-color: var(--col-grey-200);
+}
+input[type=submit].wpcf7-submit:disabled:hover {
+  background-color: var(--col-grey-200);
+  color: var(--col-white);
 }
 
 header {
@@ -21839,7 +21852,7 @@ header .navbar-brand {
 header .navbar-toggler {
   order: 5;
 }
-header .button {
+header .button, header input[type=submit].wpcf7-submit {
   order: 4;
 }
 header .navbars {
@@ -21849,7 +21862,7 @@ header .navbars {
   header .navbars {
     order: 2;
   }
-  header .button {
+  header .button, header input[type=submit].wpcf7-submit {
     order: 9;
   }
 }
@@ -22608,31 +22621,6 @@ main ul:not([class]) > li {
     columns: 3;
   }
 }
-input[type=submit].wpcf7-submit {
-  width: auto;
-  border: 1px solid var(--col-green-400);
-  background-color: var(--col-green-400);
-  color: var(--col-white);
-  border-radius: 100vw;
-  padding: 0.75em 2em;
-  text-transform: uppercase;
-  font-size: var(--fs-300);
-  font-weight: var(--fw-600);
-  transition: background-color var(--transition);
-}
-input[type=submit].wpcf7-submit:disabled {
-  border: 1px solid var(--col-grey-200);
-  background-color: var(--col-grey-200);
-}
-input[type=submit].wpcf7-submit:disabled:hover {
-  background-color: var(--col-grey-200);
-  color: var(--col-white);
-}
-input[type=submit].wpcf7-submit:hover {
-  background-color: var(--col-white);
-  color: var(--col-green-400);
-}
-
 .breadcrumbs {
   color: var(--col-grey-600);
   font-size: var(--fs-300);

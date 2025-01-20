@@ -32,3 +32,24 @@
         color: var(--col-accent);
     }
 }
+
+.wpcf7-select {
+    @extend .form-select;
+}
+input[type=submit].wpcf7-submit {
+    @extend .button;
+    @extend .button-primary;
+
+    border-radius: 0;
+    width: auto;
+
+    &:disabled {
+        border: 1px solid var(--col-grey-200);
+        background-color: var(--col-grey-200);
+        &:hover {
+            background-color: var(--col-grey-200);
+            color: var(--col-white);
+        }
+    }
+
+}

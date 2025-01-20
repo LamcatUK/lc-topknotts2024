@@ -72,34 +72,6 @@ main {
     }
 }
 
-.wpcf7-select {
-    @extend .form-select;
-}
-input[type=submit].wpcf7-submit {
-    &:disabled {
-        border: 1px solid var(--col-grey-200);
-        background-color: var(--col-grey-200);
-        &:hover {
-            background-color: var(--col-grey-200);
-            color: var(--col-white);
-        }
-    }
-    width: auto;
-    border: 1px solid var(--col-green-400);
-    background-color: var(--col-green-400);
-    color: var(--col-white);
-    border-radius: 100vw;
-    padding: 0.75em 2em;
-    text-transform: uppercase;
-    font-size: var(--fs-300);
-    font-weight: var(--fw-600);
-    transition: background-color var(--transition);
-    &:hover {
-        background-color: var(--col-white);
-        color: var(--col-green-400);
-    }
-}
-
 .breadcrumbs {
     color: var(--col-grey-600);
     font-size: var(--fs-300);
