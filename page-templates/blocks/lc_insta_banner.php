@@ -6,6 +6,6 @@
 
     ?>
     <div class="insta_banner__button">
-        <a href="/gallery/" class="button button-primary" target="_blank" aria-label="Gallery">View Gallery</a>
+        <a href="/gallery/" class="button button-primary" aria-label="Gallery">View Gallery</a>
     </div>
 </section>
