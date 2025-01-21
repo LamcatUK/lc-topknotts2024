@@ -22727,6 +22727,14 @@ main ul:not([class]) > li {
   color: var(--col-white);
 }
 
+.mw-300 {
+  max-width: 300px;
+}
+
+.mw-400 {
+  max-width: 400px;
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;
