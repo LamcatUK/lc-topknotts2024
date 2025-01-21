@@ -22575,6 +22575,16 @@ ul.price-list li::marker {
   color: var(--col-white);
 }
 
+.brands__logos {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.brands img {
+  max-width: 200px;
+}
+
 :root {
   --col-accent: var(--col-red-400);
 }
