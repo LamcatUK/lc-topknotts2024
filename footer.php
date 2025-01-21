@@ -18,7 +18,7 @@ defined('ABSPATH') || exit;
             <div id="footer_logo" class="text-center">
                 <img src="<?= get_stylesheet_directory_uri() ?>/img/topknotts--wo.png" width=205 height=40 alt="TopKnotts Crawley" class="mb-3 mx-auto">
                 <?= do_shortcode('[social_icons]') ?>
-                <a class="button button-primary justify-self-center" href="#">Book Now</a>
+                <a class="button button-primary justify-self-center" href="/contact/">Book Now</a>
             </div>
             <div id="footer_hair" class="text-center text-sm-start">
                 <div class="footer__title">Hair</div>
