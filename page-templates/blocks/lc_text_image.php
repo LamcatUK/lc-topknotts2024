@@ -3,6 +3,7 @@ $background = get_field('bg_colour') ?: 'white';
 $class = $block['className'] ?? 'py-5';
 
 $shadow = get_field('shadow') == 'Yes' ? 'has-shadow--lg' : '';
+$imgClasses = get_field('image_classes') ?? null;
 
 switch (get_field('split')) {
     case 4060:
@@ -61,7 +62,7 @@ if (isset($block['anchor'])) {
             </div>
             <div
                 class="<?= $colImage ?> <?= $orderImage ?> d-flex justify-content-center align-items-center">
-                <img src="<?= wp_get_attachment_image_url(get_field('image'), 'large') ?>" class="rounded--lg <?= $shadow ?>"
+                <img src="<?= wp_get_attachment_image_url(get_field('image'), 'large') ?>" class="rounded--lg <?= $shadow ?> <?= $imgClasses ?>"
                     alt="">
             </div>
         </div>
