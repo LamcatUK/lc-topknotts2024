@@ -23,8 +23,10 @@ function widgets_init()
 
     register_nav_menus(array(
         'primary_nav' => 'Primary Nav',
-        'footer_menu_1' => 'Footer For Her',
-        'footer_menu_3' => 'Footer Information',
+        'footer_menu_1' => 'Footer Hair',
+        'footer_menu_2' => 'Footer Beauty',
+        'footer_menu_3' => 'Footer Botox',
+        'footer_menu_4' => 'Footer Links',
     ));
 
     unregister_sidebar('hero');

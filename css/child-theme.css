@@ -21918,8 +21918,9 @@ footer .fa-ul li {
 footer .social_icons {
   display: flex;
   gap: 1rem;
-  font-size: var(--fs-700);
+  font-size: var(--fs-400);
   justify-content: center;
+  margin-bottom: 1rem;
 }
 footer .colophon {
   background-color: var(--col-grey-900);
@@ -21937,18 +21938,18 @@ footer .colophon a:hover {
 footer .footer__grid {
   display: grid;
   gap: 1rem;
-  grid-template-areas: "logo" "forher" "info" "findus";
+  grid-template-areas: "logo" "hair" "beauty" "botox" "links";
 }
 @media (min-width: 576px) {
   footer .footer__grid {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "logo" "forher" "info" "findus";
+    grid-template-areas: "logo" "hair" "beauty" "botox" "links";
   }
 }
 @media (min-width: 992px) {
   footer .footer__grid {
     grid-template-columns: repeat(5, 1fr);
-    grid-template-areas: "logo findus forher forher info";
+    grid-template-areas: "logo hair beauty botox links";
   }
 }
 footer .footer__title {
@@ -21976,23 +21977,17 @@ footer #footer_logo {
 footer #footer_logo img {
   display: block;
 }
-footer #footer_findus {
-  grid-area: findus;
+footer #footer_hair {
+  grid-area: hair;
 }
-footer #footer_forher {
-  grid-area: forher;
+footer #footer_beauty {
+  grid-area: beauty;
 }
-@media (min-width: 576px) {
-  footer #footer_forher ul {
-    -moz-columns: 2;
-    columns: 2;
-  }
+footer #footer_botox {
+  grid-area: botox;
 }
-footer #footer_forhim {
-  grid-area: forhim;
-}
-footer #footer_info {
-  grid-area: info;
+footer #footer_links {
+  grid-area: links;
 }
 
 .grid {

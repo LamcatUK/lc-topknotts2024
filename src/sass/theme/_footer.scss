@@ -36,8 +36,9 @@ footer {
     .social_icons {
         display: flex;
         gap: 1rem;
-        font-size: var(--fs-700);
+        font-size: var(--fs-400);
         justify-content: center;
+        margin-bottom: 1rem;
     }
 
     .colophon {
@@ -58,19 +59,20 @@ footer {
         &__grid {
             display: grid;
             gap: 1rem;
-            grid-template-areas: "logo" "forher" "info" "findus";
+            grid-template-areas: "logo" "hair" "beauty" "botox" "links";
             @media (min-width:576px) {
                 grid-template-columns: repeat(2,1fr);
                 grid-template-areas:
                     "logo"
-                    "forher"
-                    "info"
-                    "findus"
+                    "hair"
+                    "beauty"
+                    "botox"
+                    "links"
                 ;
             }
             @media (min-width:992px) {
                 grid-template-columns: repeat(5,1fr);
-                grid-template-areas: "logo findus forher forher info";
+                grid-template-areas: "logo hair beauty botox links";
             }
         }
         &__title {
@@ -101,22 +103,17 @@ footer {
             display: block;
         }
     }
-    #footer_findus {
-        grid-area: findus;
+    #footer_hair {
+        grid-area: hair;
     }
-    #footer_forher {
-        grid-area: forher;
-        @media (min-width:576px) {
-            ul {
-                columns: 2;
-            }
-        }
+    #footer_beauty {
+        grid-area: beauty;
     }
-    #footer_forhim {
-        grid-area: forhim;
+    #footer_botox {
+        grid-area: botox;
     }
-    #footer_info {
-        grid-area: info;
+    #footer_links {
+        grid-area: links;
     }
 
 }
