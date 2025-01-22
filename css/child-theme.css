@@ -21819,7 +21819,7 @@ header {
   transition: top var(--transition);
   max-width: 100vw;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   header {
     background: rgba(255, 255, 255, 0.4);
     -webkit-backdrop-filter: blur(2px);
@@ -21834,10 +21834,14 @@ header .nav-link {
   font-size: var(--fs-400);
   font-weight: var(--fw-600);
   color: var(--col-black);
-  padding-block: 1rem;
   padding-left: 0 !important;
   padding-right: 0 !important;
   position: relative;
+}
+@media (min-width: 1200px) {
+  header .nav-link {
+    padding-block: 1rem;
+  }
 }
 header .nav-link:hover, header .nav-link:focus, header .nav-link:focus-visible, header .nav-link[aria-current=page] {
   color: var(--col-red-400);
@@ -21845,7 +21849,7 @@ header .nav-link:hover, header .nav-link:focus, header .nav-link:focus-visible, 
 header .dropdown-item:active {
   background-color: var(--col-red-400);
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   header #main-nav .container-xl {
     align-items: stretch;
     -moz-column-gap: 2rem;
@@ -21874,6 +21878,27 @@ header .navbars {
   }
   header .button, header input[type=submit].wpcf7-submit {
     order: 9;
+  }
+}
+header .dropdown-menu {
+  border-radius: 0;
+}
+@media (max-width: 1200px) {
+  header .nav-link {
+    font-size: 24px;
+  }
+  header .button, header input[type=submit].wpcf7-submit {
+    width: calc(100% - 3rem);
+    text-align: center;
+  }
+  header .dropdown-menu {
+    background-color: inherit;
+    border: none;
+    padding-block: 0;
+  }
+  header .dropdown-menu .dropdown-item {
+    -webkit-padding-start: 1rem;
+    padding-inline-start: 1rem;
   }
 }
 
@@ -22155,7 +22180,7 @@ footer #footer_links {
 
 .hero {
   position: relative;
-  height: 600px; /* Fixed hero height */
+  height: 680px; /* Fixed hero height */
   overflow: hidden;
   display: grid;
   grid-template-areas: "stack";
@@ -22199,7 +22224,7 @@ footer #footer_links {
 }
 .hero .hero__text h1, .hero .hero__text .h1 {
   position: relative;
-  font-size: 2.5rem;
+  font-size: clamp(3.5rem, 10vw, 2.5rem);
   margin-bottom: 1.5rem; /* Increase space between h1 and the button */
   font-weight: bold;
 }

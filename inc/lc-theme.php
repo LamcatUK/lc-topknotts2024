@@ -162,8 +162,8 @@ function add_ctas_to_nav($items, $args)
 
     $phone_number = get_field('contact_phone', 'option');
 
-    $link   = '<li class="d-xl-none menu-item nav-item mb-3"><a class="button button-primary" href="/contact/">Book Now</a></li>';
-    $link  .= '<li class="d-xl-none menu-item nav-item mb-3"><a href="tel:' . parse_phone($phone_number) . '" class="button button-primary"><i class="fas fa-phone"></i> ' . $phone_number . '</a></li>';
+    $link   = '<li class="d-xl-none menu-item nav-item mt-3 mb-3"><a class="button button-primary" href="/contact/">Book Now</a></li>';
+    $link  .= '<li class="d-xl-none menu-item nav-item mb-5"><a href="tel:' . parse_phone($phone_number) . '" class="button button-primary"><i class="fas fa-phone"></i> ' . $phone_number . '</a></li>';
     $items .= $link;
 
     return $items;

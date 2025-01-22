@@ -5,7 +5,7 @@ header {
     right: 0;
     z-index: 9999;
     background-color: var(--col-grey-200);
-    @media (min-width:992px) {
+    @media (min-width:1200px) {
         background:rgba(255, 255, 255, 0.4);
         backdrop-filter: blur(2px);
     }
@@ -24,7 +24,9 @@ header {
         font-size: var(--fs-400);
         font-weight: var(--fw-600);
         color: var(--col-black);
-        padding-block: 1rem;
+        @media (min-width:1200px) {
+            padding-block: 1rem;
+        }
         padding-left: 0 !important;
         padding-right: 0 !important;
         position: relative;
@@ -41,7 +43,7 @@ header {
     }
 
     #main-nav {
-        @media (min-width:992px) {
+        @media (min-width:1200px) {
             .container-xl {
                 align-items: stretch;
                 column-gap: 2rem;
@@ -73,6 +75,30 @@ header {
         .button {
             order: 9;
         }
+    }
+
+    .dropdown-menu {
+        border-radius: 0;
+    }
+
+    @media (max-width:1200px) {
+        .nav-link {
+            font-size: 24px;
+        }
+        .button {
+            width: calc( 100% - 3rem);
+            text-align: center;
+        }
+
+        .dropdown-menu {
+            background-color: inherit;
+            border: none;
+            padding-block: 0;
+            .dropdown-item {
+                padding-inline-start: 1rem;
+            }
+        }
+        
     }
 
 }
