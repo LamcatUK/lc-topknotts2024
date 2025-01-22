@@ -17,6 +17,9 @@ defined('ABSPATH') || exit;
         <div class="footer__grid py-5">
             <div id="footer_logo" class="text-center">
                 <img src="<?= get_stylesheet_directory_uri() ?>/img/topknotts--wo.png" width=205 height=40 alt="TopKnotts Crawley" class="mb-3 mx-auto">
+                <div class="pb-3">
+                    <?= do_shortcode('[contact_address]') ?>
+                </div>
                 <?= do_shortcode('[social_icons]') ?>
                 <a class="button button-primary justify-self-center" href="/contact/">Book Now</a>
             </div>
