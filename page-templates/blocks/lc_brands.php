@@ -12,7 +12,7 @@
                 <div class="swiper-wrapper">
                     <?php
                     foreach (get_field('logos') as $l) {
-                        echo '<div class="swiper-slide">' . wp_get_attachment_image($l, 'full', false) . '</div>';
+                        echo '<div class="swiper-slide text-center">' . wp_get_attachment_image($l, 'full', false) . '</div>';
                     }
                     ?>
                 </div>
