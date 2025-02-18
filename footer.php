@@ -32,7 +32,7 @@ defined('ABSPATH') || exit;
                 <?php wp_nav_menu(array('theme_location' => 'footer_menu_2')); ?>
             </div>
             <div id="footer_botox" class="text-center text-sm-start">
-                <div class="footer__title">Botox</div>
+                <div class="footer__title">Aesthetics</div>
                 <?php wp_nav_menu(array('theme_location' => 'footer_menu_3')); ?>
             </div>
             <div id="footer_links" class="text-center text-sm-start">
