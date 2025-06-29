@@ -48,7 +48,7 @@ defined('ABSPATH') || exit;
                     &copy; <?= date('Y') ?> TopKnotts
                 </div>
                 <div class="col-lg-4 text-center text-lg-end">
-                    <a href="/privacy-policy/">Privacy</a> &amp; <a href="/cookie-policy/">Cookie</a> Policies |
+                    <a href="/privacy-policy/">Privacy</a> &amp; <a href="/cookie-policy-uk/">Cookie</a> Policies |
                     Site by <a href="https://www.lamcat.co.uk/" target="_blank">Lamcat</a>
                 </div>
             </div>
